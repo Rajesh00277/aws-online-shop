@@ -16,6 +16,10 @@ phases:
       - echo Building...
       - npm run build
 artifacts:
+  base-directory: build
+  discard-paths: no
   files:
     - '**/*'
-  discard-paths: no
+cache:
+  paths:
+    - './node_modules/**/*'
