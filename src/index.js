@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import * as ServiceWorker from './serviceWorker';
+
 import { store, persistor } from './redux/store';
 
 import CartProvider from './provider/cart-provider/CartProvider';
@@ -23,3 +25,5 @@ ReactDOM.render(
 	</CartProvider>,
 	document.getElementById('root')
 );
+
+ServiceWorker.register();
